@@ -1,7 +1,5 @@
 # Registro de Análise de Incidentes (Troubleshooting)
 
-Este arquivo contém a padronização dos incidentes analisados, estruturados conforme o modelo operacional de 9 pontos, utilizando quebras de linha após cada título de item.
-
 ---
 
 ## IT-1001 — Desembolso ao cliente – 901.111.111-01
@@ -95,6 +93,7 @@ N/A neste caso — pagamento identificado, ação operacional no suporte. Escala
 **9. Status final**
 SOLUCIONADO
 
+_Utilizada a resposta enviada no modelo TRILHA._ 
 ---
 
 ## IT-1004 — Erro ao gerar parcela(s) cobrança (sistema interno) - 901.444.444-04
@@ -144,10 +143,12 @@ CSV: `renegotiation_block_reason=FLAG_ACCELERATED_BLOCK`
 Segundo a mensagem da coluna acima, existe uma flag a respeito de “parcelas aceleradas”. No meu entendimento, se o cliente possui parcela acelerada, ele não consegue renegociar.
 
 **5. Retry/reprocesso**
-> **IMPORTANTE:** Por não saber a política sobre Renegociação e Parcelas Aceleradas, será necessário escalar para o setor adequado. Porém, vou considerar que posso liberar via função do sistema (uma tentativa).
+> **IMPORTANTE:** Por não saber a política sobre Renegociação e Parcelas Aceleradas, será necessário escalar para o setor adequado.
+Porém vou considerar que posso liberar via função do sistema (uma tentativa).
 
 **6. Correção manual**
-> **IMPORTANTE:** Vide acima, vou considerar que não há regra específica para essa situação. Precisaria de mais informações para atuar corretamente. Porém, simulando que eu possa liberar via função do sistema, tentaria utilizar a função de liberação; caso ocasionasse algum erro ou bloqueio, iria escalar para o setor adequado.
+> **IMPORTANTE:** Vide acima, vou considerar que não há regra específica para essa situação. Precisaria de mais informações para atuar corretamente.
+Porém considerando que eu possa liberar via função do sistema, tentaria utilizar a função de liberação; caso ocasionasse algum erro ou bloqueio, iria escalar para o setor adequado.
 
 **7. Escalação**
 Por não ter certeza da política sobre Renegociação e Parcelas Aceleradas, seria necessário escalar para o setor adequado. Entendo que se o cliente quer renegociar a dívida é vantagem para a empresa validar; se está acusando algum bloqueio pelo `FLAG_ACCELERATED_BLOCK`, precisamos entender o motivo.
@@ -234,13 +235,13 @@ Confirmar o status do desembolso e identificar o motivo do status.
 CSV: `disbursement_status=indeferido`, `disbursement_error=BANCARIZADOR_OK`, `contract_status=cancelado`
 
 **4. Hipótese**
-O cliente já possui outra solicitação/contrato ativo: 80008002, que foi solicitado no dia 10/06/2026.
+O cliente já possui outra solicitação/contrato ativo: 80008002, solicitada em 10/06/2026. Talvez relação com o ticket IT-1011?
 
 **5. Retry/reprocesso**
 N/A. O contrato indicado está cancelado.
 
 **6. Correção manual**
-N/A. No meu entendimento, só pode existir 1 contrato ativo por CPF/Cliente.
+N/A. No meu entendimento, só pode existir 1 contrato ativo por CPF/Cliente e por isso o BANCARIZADOR cancelou o mesmo.
 
 **7. Escalação**
 N/A. Precisa apenas alertar ao cliente sobre dupla contratação.
