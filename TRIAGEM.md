@@ -36,3 +36,13 @@ Cliente já finalizou os pagamentos e precisa apenas receber o Termo de Quitaç�
 
 **12. IT-1006**  
 Solicitação de exclusão do cadastro, baixa prioridade. Caso seja uma função do Suporte o mesmo a fará, caso contrário irá escalar para a equipe adequada.
+
+
+
+
+**Considerações finais**  
+Eu acredito que tenha encontrado soluções lógicas para todos os casos, não encontrei nenhuma dificuldade em minha análise. A única barreira que encontrei foi entender o que eu tenho acesso e o que posso executar.   
+De modo geral eu priorizo novos clientes para finalizar o contrato, pois perder um cliente - por demora no atendimento - é algo que raramente conseguimos recuperar. Após isso é deixei a renegociação, pois precisamos aproveitar o interesse do cliente em resolver as pendências e então a liberação do desembolso. A geração de novos boletos vem logo atrás, mas não vejo como urgência (embora dependendo da regra da JUVO é possível que coloque gerar boletos antes da liberação do desembolso) pois é mais importante fidelizar um novo cliente (desembolso). Por fim os demais itens.   
+Em alguns tickets eu precisei colocar um "OU"/"CASO"/etc pois precisaria entender melhor a estrutura e qual equipe/setor é o mais adequado para ESCALAR. Exemplo, problema na renegociação: Foi um bloqueio do sistema, foi erro do sistema em bloquear? E caso seja um problema, devo escalar pro DEV ou para o time de PRODUTO para entender o motivo do erro?  
+
+No mais, estou feliz com minhas respostas.
