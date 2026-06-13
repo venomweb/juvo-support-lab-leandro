@@ -69,7 +69,7 @@ Arquivo já existe como **template** — leia a explicação no topo do arquivo 
 
 ## 5. Checklist
 
-- [ ] `TRIAGEM.md` — 12 tickets ordenados
-- [ ] `TRILHAS.md` — 12 trilhas completas (passos 1–9)
-- [ ] `docs/REVERSE.md`
-- [ ] Link do repositório enviado
+- [x] `TRIAGEM.md` — 12 tickets ordenados
+- [x] `TRILHAS.md` — 12 trilhas completas (passos 1–9)
+- [x] `docs/REVERSE.md`
+- [x] Link do repositório enviado
