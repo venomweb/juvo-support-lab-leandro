@@ -81,11 +81,11 @@ Preencha com honestidade — usar IA para organizar texto ou revisar redação *
 
 | Campo | Resposta |
 |-------|----------|
-| Usou IA neste teste? | Sim / Não |
-| Ferramenta(s) | _(ex.: ChatGPT, Claude, Copilot, Cursor…)_ |
-| Para quê? | _(ex.: revisar texto da trilha, resumir CSV, checar nomenclatura…)_ |
-| O que **não** delegou à IA? | _(ex.: ordem da triagem, hipótese do IT-1009, decisão de escalar IT-1001…)_ |
+| Usou IA neste teste? | [Sim] / Não |
+| Ferramenta(s) | Gemini |
+| Para quê? | Formatação do trilhas.md como markdown e análise ortográfica |
+| O que **não** delegou à IA? | Todos os demais itens |
 
 **Comentário opcional** (1–3 linhas):
 
-> _(escreva aqui)_
+> Toda a análise foi feita sem utilização de IA, utilizei a ferramenta apenas para converter o meu .odt para um formato .md. Também corrigiu a ortografia de alguns pontos.
