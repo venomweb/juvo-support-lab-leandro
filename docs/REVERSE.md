@@ -81,7 +81,7 @@ Preencha com honestidade — usar IA para organizar texto ou revisar redação *
 
 | Campo | Resposta |
 |-------|----------|
-| Usou IA neste teste? | [Sim] / Não |
+| Usou IA neste teste? | Sim |
 | Ferramenta(s) | Gemini |
 | Para quê? | Formatação do trilhas.md como markdown e análise ortográfica |
 | O que **não** delegou à IA? | Todos os demais itens |
