@@ -59,17 +59,17 @@ Como a resposta **mudaria sua trilha** (passos 5–7 em [MODELO-TRILHA](./MODELO
 
 ### Sua resposta (preencha aqui)
 
-**a) Contexto:**
+**a) Contexto:**  
 
-> _(escreva aqui)_
+> _No ticket IT-1005, não há muitas informações a respeito do bloqueio da renegociação._
 
 **b) Sua pergunta ao time:**
 
-> _(escreva aqui)_
+> _Gostaria de entender melhor os motivos que podem bloquear a renegociação. É erro do sistema ou regra do negócio não poder renegociar caso tenha parcelas aceleradas?_
 
 **c) Por que isso importa / o que mudaria na trilha:**
 
-> _(escreva aqui)_
+> _Ter essa informação é importante para todos os casos em que esse erro fosse detectado. Entendendo como funciona as regras do negócio me faria ter uma qualidade maior e agilidade na resolução desses casos._
 
 ---
 
