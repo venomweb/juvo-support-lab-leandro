@@ -41,8 +41,12 @@ Solicitação de exclusão do cadastro, baixa prioridade. Caso seja uma função
 ---
 
 **Considerações finais**  
-Eu acredito que tenha encontrado soluções lógicas para todos os casos, não tive nenhuma dificuldade em minha análise. A única barreira foi entender o que eu tenho acesso e o que posso executar.   
+Eu acredito que tenha encontrado soluções lógicas para todos os casos, não tive nenhuma dificuldade em minha análise. A única barreira foi entender o que eu tenho acesso e o que posso executar.  
+
+Talvez minha mensagem aos agentes esteja longa para o padrão que vocês utilizem hoje, mas acredito que mais informações seja algo sempre útil.  
+
 De modo geral eu priorizo novos clientes para oficializar o contrato, pois perder um cliente - por demora no atendimento - é algo que raramente conseguimos recuperar. Após isso deixei a renegociação pois precisamos aproveitar o interesse do cliente em resolver as pendências, após isso veio a liberação do desembolso. A geração de novos boletos vem logo atrás, mas não vejo como urgência (dependendo da regra da JUVO é possível que coloque gerar boletos antes da liberação do desembolso) pois é mais importante fidelizar um novo cliente (desembolso). Por fim os demais itens.   
+
 Em alguns tickets eu precisei colocar um "OU"/"CASO"/etc pois precisaria entender melhor a estrutura e qual equipe/setor é o mais adequado para ESCALAR. Exemplo, problema na renegociação: Foi um bloqueio do sistema, foi erro do sistema em bloquear? E caso seja um problema, devo escalar pro DEV ou para o time de PRODUTO para entender o motivo do erro?  
 
-No mais, estou feliz com minhas respostas.
+No mais, estou feliz com minhas respostas. Estou sempre disponível para explicar todos os retornos enviados.
