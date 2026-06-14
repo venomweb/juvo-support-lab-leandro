@@ -20,13 +20,13 @@ Erro na conexão (possivelmente no endpoint) com o BANCARIZADOR ou tratamento de
 Precisaria testar o nosso lado para confirmar se há algum erro de conexão ou até mesmo o tratamento da resposta do BANCARIZADOR. Verificaria se existe alguma ferramenta disponível para teste ou se nesse caso é necessário escalar.
 
 **6. Correção manual**
-Nesse caso, no meu entendimento, precisamos de validação/solicitação externa e por isso a única forma manual de tentativa da correção é executar manualmente alguma função para validação com o BANCARIZADOR (vide acima).
+Nesse caso, no meu entendimento, precisamos de validação/solicitação externa e por isso a única forma de tentativa da correção é executar manualmente alguma função para validação/solicitação com o BANCARIZADOR (vide acima).
 
 **7. Escalação**
 Escala somente se o teste manual falhar ou erro repetir em outros clientes. Dependendo do tipo de erro escalar ao DEV ou BANCARIZADOR.
 
 **8. Comunicação**
-`@agente.cx01` Ocorreu erro na tentativa de pagamento do desembolso pelo nosso parceiro externo (BANCARIZADOR). Estou verificando se consigo efetuar o teste/validação através das ferramentas disponíveis, caso contrário escalarei o ticket. Avisar ao cliente que estamos analisando e retornaremos assim que possível.
+`@agente.cx01` Erro na tentativa de pagamento do desembolso pelo BANCARIZADOR. Verificando se consigo efetuar o teste/validação através das ferramentas disponíveis. Orientar ao cliente que estamos analisando e retornaremos assim que possível.
 
 **9. Status final**
 ESCALADO
@@ -144,7 +144,7 @@ CSV: `renegotiation_block_reason=FLAG_ACCELERATED_BLOCK`
 Segundo a mensagem da coluna acima, existe uma flag a respeito de “parcelas aceleradas”. No meu entendimento, se o cliente possui parcela acelerada, ele não consegue renegociar.
 
 **5. Retry/reprocesso**
-> **IMPORTANTE:** Por não saber a política sobre Renegociação e Parcelas Aceleradas, será necessário escalar para o setor adequado.
+> **IMPORTANTE:** Por não saber a política sobre Renegociação e Parcelas Aceleradas, talvez seja necessário escalar para o setor adequado.
 Porém vou considerar que posso liberar via função do sistema (uma tentativa).
 
 **6. Correção manual**
@@ -155,7 +155,7 @@ Porém considerando que eu possa liberar via função do sistema, tentaria utili
 Por não ter certeza da política sobre Renegociação e Parcelas Aceleradas, seria necessário escalar para o setor adequado. Entendo que se o cliente quer renegociar a dívida é vantagem para a empresa validar; se está acusando algum bloqueio pelo `FLAG_ACCELERATED_BLOCK`, precisamos entender o motivo.
 
 **8. Comunicação**
-`@agente.cx03` Na verdade, o cliente possui parcelas aceleradas, ao menos é isso que o sistema está reportando. Estou escalando o ticket para o setor adequado para verificar o erro, checar se está correto e/ou encontrar uma solução.
+`@agente.cx03` O cliente possui parcelas aceleradas, ao menos é isso que o sistema está reportando. Estou escalando o ticket para o setor adequado para verificar o erro, checar se está correto e/ou encontrar uma solução.
 
 **9. Status final**
 ESCALADO
@@ -180,13 +180,13 @@ Identifiquei no sistema que já existe a informação de solicitação da remoç
 Utilizarei a ferramenta para exclusão/desativação ou escalarei para o setor adequado. Não há pendências.
 
 **6. Correção manual**
-Utilizarei a ferramenta para exclusão/desativação ou escalarei para o setor adequado. Não há pendências.
+Utilizarei a ferramenta para exclusão/desativação ou escalarei para o setor adequado. Não há pendências. A solicitação do cliente é válida.
 
 **7. Escalação**
 N/A. Escala (para o DEV) apenas se a exclusão/desativação acusar erro.
 
 **8. Comunicação**
-`@agente.cx05` Confirmei que de fato já existe a solicitação para a exclusão/desativação do cadastro do cliente. Já estamos efetuando os procedimentos.
+`@agente.cx05` Já existia a solicitação para a exclusão/desativação do cadastro do cliente. Estou efetuando os procedimentos.
 
 **9. Status final**
 SOLUCIONADO
@@ -217,7 +217,7 @@ Após efetuar o disparo, iria acompanhar o status; é possível que o e-mail est
 N/A. Escala (DEV) apenas se o disparo indicar algum erro de sistema.
 
 **8. Comunicação**
-`@agente.cx06` Efetuei novo disparo do e-mail com o termo para o e-mail `cliente_ficticio_g@cliente.com.br` e não retornou nenhum erro. Solicitar a confirmação do recebimento.
+`@agente.cx06` Efetuei novo disparo do e-mail com o termo para o e-mail `cliente_ficticio_g@cliente.com.br`. Solicitar o cliente a confirmação do recebimento.
 
 **9. Status final**
 SOLUCIONADO
@@ -242,13 +242,13 @@ O cliente já possui outra solicitação/contrato ativo: 80008002, solicitada em
 N/A. O contrato indicado está cancelado.
 
 **6. Correção manual**
-N/A. No meu entendimento, só pode existir 1 contrato ativo por CPF/Cliente e por isso o BANCARIZADOR cancelou o mesmo.
+N/A. No meu entendimento, só pode existir 1 contrato ativo por CPF/Cliente e por isso o BANCARIZADOR cancelou o mesmo. Ao meu ver não é possível solicitar um novo contrato enquanto o dispositivo já está sendo utilizado como garantia em outro contrato.
 
 **7. Escalação**
 N/A. Precisa apenas alertar ao cliente sobre dupla contratação.
 
 **8. Comunicação**
-`@agente.cx07` Pelo que pude identificar, esse cliente já possui um outro contrato ativo (80008002) que foi solicitado no dia 10/06/2026 às 22:00. Acredito que ele tenha feito uma nova tentativa e gerado um novo contrato. O Contrato mencionado (80008001) já consta como cancelado. Solicitar ao cliente aguardar o desembolso do contrato 80008002.
+`@agente.cx07` Pelo que pude identificar, esse cliente já possui um outro contrato ativo (80008002. O Contrato mencionado (80008001) já consta como cancelado. Solicitar ao cliente aguardar o desembolso do contrato 80008002.
 
 **9. Status final**
 SOLUCIONADO
@@ -281,7 +281,7 @@ N/A. Apenas se acusar erro no update descrito acima.
 **8. Comunicação**
 `@agente.cx08`  
 * **Possibilidade 1:** Identifiquei que o contrato está assinado corretamente e o sistema não foi atualizado. Fiz a atualização do mesmo no sistema e já executei o desembolso;  
-* **Possibilidade 2:** O cliente não possui o contrato devidamente assinado, por isso está acusando erro para o desembolso. Peça para o mesmo confirmar a assinatura e logo após o desembolso será efetuado.
+* **Possibilidade 2:** O cliente não possui o contrato devidamente assinado, por isso está acusando erro. Peça para o mesmo confirmar a assinatura e logo após o desembolso será efetuado.
 
 **9. Status final**
 SOLUCIONADO
@@ -291,13 +291,13 @@ SOLUCIONADO
 ## IT-1010 — Erro ao gerar parcela(s) cobrança (sistema interno) – 901.101.010-10
 
 **1. Onde consulto primeiro**
-Sistema interno → contrato 81000001 / CPF 901.101.010-10 → colunas 'installment_ref'
+Sistema interno → contrato 80010001 / CPF 901.101.010-10 → colunas 'installment_ref
 
 **2. O que busco**
 Confirmar qual foi o último boleto gerado.
 
 **3. O que encontrei**
-CSV: `installment_ref=parcela_10;parcela_11`
+CSV: `installment_ref=parcela_10;parcela_11,payment_id=doc_acc_fict_10`
 
 **4. Hipótese**
 Cliente gerou parcela acelerada e quer pagar apenas a próxima (10).
@@ -306,13 +306,13 @@ Cliente gerou parcela acelerada e quer pagar apenas a próxima (10).
 N/A. Apenas efetuar o acerto solicitado.
 
 **6. Correção manual**
-Considerando que eu tenho autorização para o procedimento e esteja de acordo com a política da empresa, efetuaria o cancelamento da parcela acelerada (11) e regeraria a cobrança da parcela 10.
+Considerando que eu tenho autorização para o procedimento e esteja de acordo com a política da empresa, efetuaria o cancelamento da parcela acelerada (10+11) `doc_acc_fict_10` e regeraria a cobrança da parcela 10.
 
 **7. Escalação**
 N/A. Apenas se acusar erro no procedimento descrito acima ou caso eu não tenha autorização.
 
 **8. Comunicação**
-`@agente.cx09` Conforme solicitado, efetuei o cancelamento da parcela acelerada 11; dessa forma, regerei a cobrança da parcela 10 de acordo com o solicitado.
+`@agente.cx09` Efetuei o cancelamento da parcela acelerada 11; dessa forma, regerei a cobrança da parcela 10 de acordo com o solicitado.
 
 **9. Status final**
 SOLUCIONADO
@@ -331,7 +331,7 @@ Confirmar o status do contrato e do desembolso.
 CSV: `contract_status=assinado`, `disbursement_status=aguardando_desembolso`
 
 **4. Hipótese**
-Existe algum erro que não é compartilhado com minha base de dados.
+Existe algum erro que não é compartilhado com minha base de dados? Há algum problema na no BANCARIZADOR?
 
 **5. Retry/reprocesso**
 Faria nova tentativa de desembolso, pois a minha base de dados consta apenas a tentativa do dia 10/06 às 22:00.
