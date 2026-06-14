@@ -152,7 +152,7 @@ Porém vou considerar que posso liberar via função do sistema (uma tentativa).
 Porém considerando que eu possa liberar via função do sistema, tentaria utilizar a função de liberação; caso ocasionasse algum erro ou bloqueio, iria escalar para o setor adequado.
 
 **7. Escalação**
-Por não ter certeza da política sobre Renegociação e Parcelas Aceleradas, seria necessário escalar para o setor adequado. Entendo que se o cliente quer renegociar a dívida é vantagem para a empresa validar; se está acusando algum bloqueio pelo `FLAG_ACCELERATED_BLOCK`, precisamos entender o motivo.
+Por não ter certeza da política sobre Renegociação e Parcelas Aceleradas, seria necessário escalar para o setor adequado. Entendo que se o cliente quer renegociar a dívida é vantagem para a empresa validar; se está acusando algum bloqueio pelo `FLAG_ACCELERATED_BLOCK`, precisamos entender o motivo. Embora a instrução (FLUXO-IT-SUPPORT.md) indique para não escalar geração de boleto, esse caso possui uma mensagem específica de erro além do conflito entre o que o CX vê e o que o sistema indica.
 
 **8. Comunicação**
 `@agente.cx03` O cliente possui parcelas aceleradas, ao menos é isso que o sistema está reportando. Estou escalando o ticket para o setor adequado para verificar o erro, checar se está correto e/ou encontrar uma solução.
@@ -248,7 +248,7 @@ N/A. No meu entendimento, só pode existir 1 contrato ativo por CPF/Cliente e po
 N/A. Precisa apenas alertar ao cliente sobre dupla contratação.
 
 **8. Comunicação**
-`@agente.cx07` Pelo que pude identificar, esse cliente já possui um outro contrato ativo (80008002. O Contrato mencionado (80008001) já consta como cancelado. Solicitar ao cliente aguardar o desembolso do contrato 80008002.
+`@agente.cx07` Identifiquei que esse cliente já possui um outro contrato ativo (80008002). O Contrato mencionado (80008001) já consta como cancelado. Solicitar ao cliente aguardar o desembolso do contrato 80008002.
 
 **9. Status final**
 SOLUCIONADO
@@ -309,10 +309,10 @@ N/A. Apenas efetuar o acerto solicitado.
 Considerando que eu tenho autorização para o procedimento e esteja de acordo com a política da empresa, efetuaria o cancelamento da parcela acelerada (10+11) `doc_acc_fict_10` e regeraria a cobrança da parcela 10.
 
 **7. Escalação**
-N/A. Apenas se acusar erro no procedimento descrito acima ou caso eu não tenha autorização.
+N/A. Apenas se acusar erro no procedimento descrito.
 
 **8. Comunicação**
-`@agente.cx09` Efetuei o cancelamento da parcela acelerada 11; dessa forma, regerei a cobrança da parcela 10 de acordo com o solicitado.
+`@agente.cx09` Efetuei o cancelamento da parcela acelerada 11 e com isso regerei a cobrança da parcela 10.
 
 **9. Status final**
 SOLUCIONADO
