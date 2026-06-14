@@ -353,7 +353,7 @@ ESCALADO
 ## IT-1012 — Dúvida — prazo de desembolso - 901.121.212-12
 
 **1. Onde consulto primeiro**
-Sistema interno → contrato 81200001 / CPF 901.121.212-12 → colunas 'contract_status', 'disbursement_status'
+Sistema interno → contrato 80012001 / CPF 901.121.212-12 → colunas 'contract_status', 'disbursement_status'
 
 **2. O que busco**
 Confirmar o status do contrato e do desembolso.
